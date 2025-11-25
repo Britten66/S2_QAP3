@@ -1,13 +1,18 @@
 ```
 project-root/
-├── src/
-│   ├── App.jsx
-│   ├── NeighborsA.jsx
-│   ├── NeighborsI.jsx
-│   ├── App.css
-│   ├── NeighborsA.css
-│   └── NeighborsI.css
+├── node_modules/
 ├── public/
 │   └── index.html
-└── package.json
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── NeighborsA.jsx
+│   ├── NeighborsA.css
+│   ├── NeighborsI.jsx
+│   ├── NeighborsI.css
+│   ├── index.js
+│   └── index.css
+├── .gitignore
+├── package.json
+└── package-lock.json
 ```
