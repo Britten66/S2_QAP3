@@ -1,18 +1,16 @@
 ```
-project-root/
-├── node_modules/
-├── public/
-│   └── index.html
-├── src/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── NeighborsA.jsx
-│   ├── NeighborsA.css
-│   ├── NeighborsI.jsx
-│   ├── NeighborsI.css
-│   ├── index.js
-│   └── index.css
-├── .gitignore
+qap3-neighbors/
+├── index.html
 ├── package.json
-└── package-lock.json
+├── vite.config.js
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── components/
+    │   ├── NeighborsA.jsx
+    │   ├── NeighborsI.jsx
+    │   └── CountryCard.jsx       
+    └── styles/
+        └── App.css              
+
 ```
