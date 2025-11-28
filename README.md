@@ -114,9 +114,14 @@ Each country object contains:
 - [ ] Responsive styling
 
 ## Resources Used
-- React Documentation: https://react.dev
-- REST Countries API: https://restcountries.com
-- MDN Web Docs: https://developer.mozilla.org
+Resources Used
+
+Class lectures and notes
+React Documentation: https://react.dev
+REST Countries API: https://restcountries.com
+Claude for debugging help, code review, and clarifying React concepts
+YouTube tutorials 
+Stack Overflow 
 
 ## Time Spent
 - Initial setup: _2_ hours
