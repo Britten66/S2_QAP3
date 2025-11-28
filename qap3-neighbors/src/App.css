@@ -1,0 +1,36 @@
+.headerText {
+  text-align: center;
+}
+.countryBtn {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.countryBtn button {
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.countryBtn :hover {
+  color: white;
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px;
+  margin-top: 85px;
+  padding: 20px;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
