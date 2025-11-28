@@ -7,7 +7,7 @@ A React application that fetches country data from an API and filters countries 
 
 ### 1. Clone/Download Project
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Britten66/S2_QAP3.git
 cd qap3-neighbors
 ```
 
