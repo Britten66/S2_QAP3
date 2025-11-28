@@ -1,7 +1,7 @@
 # QAP3 - Neighboring Countries React App
 
 ## Project Overview
-A React application that fetches country data from an API and filters countries based on whether their neighbors' names start with specific letters (A or I).
+A React application that fetches country data from an API and filters countries based on whether their neighbor names start with specific letters (A or I).
 
 ## Setup Instructions
 
