@@ -114,14 +114,15 @@ Each country object contains:
 - [ ] Responsive styling
 
 ## Resources Used
-Resources Used
 
-Class lectures and notes
-React Documentation: https://react.dev
-REST Countries API: https://restcountries.com
-Claude for debugging help, code review, and clarifying React concepts
-YouTube tutorials 
-Stack Overflow 
+## Resources Used
+Class lectures and notes  
+React Documentation: https://react.dev  
+REST Countries API: https://restcountries.com  
+OpenAI (ChatGPT) for debugging help, code review, and clarifying React concepts  
+Claude for debugging help, code review, and clarifying React concepts  
+YouTube tutorials  
+Stack Overflow  
 
 ## Time Spent
 - Initial setup: _2_ hours
@@ -129,6 +130,7 @@ Stack Overflow
 - Styling: _2_ hours
 - Debugging: _6_ hours
 - **Total: _14_ hours**
+
 
 
 ## Author
