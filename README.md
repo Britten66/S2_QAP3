@@ -1,4 +1,5 @@
 # QAP3 - Neighboring Countries React App
+Christopher Britten - Semester 2 QAP3
 
 ## Project Overview
 A React application that fetches country data from an API and filters countries based on whether their neighbor names start with specific letters (A or I).
@@ -102,16 +103,6 @@ Each country object contains:
 4. **Conditional Rendering**: Using `&&` operator
 5. **Props**: Passing data between components
 6. **Component Structure**: Separating concerns
-
-## Assignment Completion Checklist
-- [ ] Fetches data from API using `useEffect`
-- [ ] Filters countries by neighbor starting letter
-- [ ] Two separate components (NeighborsA, NeighborsI)
-- [ ] Displays: name, capital, flag, neighbor list
-- [ ] Buttons toggle between views
-- [ ] No page refresh on button click
-- [ ] Clean, commented code
-- [ ] Responsive styling
 
 ## Resources Used
 
