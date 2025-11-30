@@ -1,136 +1,129 @@
-# QAP3 - Neighboring Countries React App
-Christopher Britten - Semester 2 QAP3
+# QAP3 – Neighboring Countries React App
+**Author:** Christopher Britten  
+**Course:** Semester 2 – QAP 3  
 
-## Project Overview
-A React application that fetches country data from an API and filters countries based on whether their neighbor names start with specific letters (A or I).
+## Summary
+A React application that fetches live country data from the REST Countries API and filters countries based on whether they have neighbors whose names start with **A** or **I**. The app includes an interactive country viewer with navigation buttons, flag display, country facts, and a Google Maps embed showing the selected country’s location.
 
-## Setup Instructions
+---
 
-### 1. Clone/Download Project
+## Setup
 ```bash
 git clone https://github.com/Britten66/S2_QAP3.git
 cd qap3-neighbors
-```
-
-### 2. Install Dependencies
-```bash
 npm install
-```
-
-### 3. Start Development Server
-```bash
 npm run dev
 ```
 
-The app will open at `http://localhost:5173`
+App runs at:  
+`http://localhost:5173`
+
+---
+
+## Tech Used
+- React (Vite)
+- REST Countries API v3.1  
+- Google Maps Embed (query-based iframe)
+- CSS (custom layout + dark theme)
+
+---
 
 ## Project Structure
+```plaintext
+src/
+├── components/
+│   ├── MapView.jsx
+│   ├── NeighborA.jsx
+│   ├── NeighborI.jsx
+│   ├── NeighborA.css
+│   ├── NeighborI.css
+├── App.jsx
+├── app.css
+└── main.jsx
 ```
-qap3-neighbors/
-├── src/
-│   ├── components/
-│   │   ├── NeighborA.jsx       # Displays countries with "A" neighbors
-│   │   ├── NeighborA.css       # Styles for NeighborA component
-│   │   ├── NeighborI.jsx       # Displays countries with "I" neighbors
-│   │   └── NeighborI.css       # Styles for NeighborI component
-│   ├── App.jsx                 # Main component with fetch logic
-│   ├── App.css                 # Main app styles
-│   └── main.jsx                # Entry point
-├── package.json
-└── README.md
-```
+
+---
 
 ## How It Works
 
-### 1. Data Fetching (App.jsx)
-- Uses `useEffect` hook to fetch data on component mount
-- Fetches from: `https://restcountries.com/v2/all`
-- Stores all countries in state
+### Fetching Data
+REST Countries API is called on load:
 
-### 2. Filtering Logic
-The app filters countries in two ways:
+```javascript
+fetch(
+  "https://restcountries.com/v3.1/all?fields=name,capital,flags,borders,cca3,languages,currencies"
+)
+```
 
-**Countries with neighbors starting with "A":**
+Results are stored and filtered into two categories:  
+- Countries with **A-starting** neighbors  
+- Countries with **I-starting** neighbors  
+
+### Filtering Example
 ```javascript
 const filteredResultA = data.filter((country) => {
   if (!country.borders) return false;
-  return country.borders.some((borderCode) => {
-    const neighbor = data.find((c) => c.alpha3Code === borderCode);
-    return neighbor?.name.startsWith("A");
+  return country.borders.some((code) => {
+    const neighbor = data.find(c => c.cca3 === code);
+    return neighbor?.name.common.startsWith("A");
   });
 });
 ```
 
-**Countries with neighbors starting with "I":**
-- Same logic, checks for names starting with "I"
+### Navigation + Country Display
+`MapView.jsx` shows:
+- Flag  
+- Country name  
+- Capital  
+- Border codes  
+- Languages  
+- Currency  
+- Quick facts sidebar  
+- Prev / Next buttons  
 
-### 3. State Management
-```javascript
-const [showA, setShowA] = useState(false);  // Toggle A component
-const [showI, setShowI] = useState(false);  // Toggle I component
-const [neighborsA, setNeighborsA] = useState([]);  // Filtered A data
-const [neighborsI, setNeighborsI] = useState([]);  // Filtered I data
+### Google Maps Embed
+```jsx
+const query = encodeURIComponent(current.name.common);
+
+<iframe
+  src={`https://www.google.com/maps?q=${query}&output=embed`}
+  title={current.name.common}
+  loading="lazy"
+/>
 ```
 
-### 4. Conditional Rendering
-```javascript
-{showA && <NeighborsA countries={neighborsA} />}
-{showI && <NeighborsI countries={neighborsI} />}
-```
+---
 
-## Technologies Used
-- **React** - UI library
-- **Vite** - Build tool
-- **CSS3** - Styling
-- **REST Countries API** - Data source
+## Styling
+Dark theme (`#0d1117`) with blue accent colors.  
+Flexbox layout for side-by-side country info and map.  
+Rounded containers and spacing adjustments for readability.
 
-## API Data Structure
-Each country object contains:
-```javascript
-{
-  name: "Canada",
-  capital: "Ottawa",
-  flags: { svg: "url...", png: "url..." },
-  borders: ["USA"],
-  alpha3Code: "CAN"
-}
-```
-
-## Key Learning Concepts
-1. **React Hooks**: `useState`, `useEffect`
-2. **API Fetching**: Using `fetch()` with `.then()` promises
-3. **Array Methods**: `.filter()`, `.some()`, `.find()`, `.map()`
-4. **Conditional Rendering**: Using `&&` operator
-5. **Props**: Passing data between components
-6. **Component Structure**: Separating concerns
-
-## Resources Used
-
-## Resources Used
-Class lectures and notes  
-React Documentation: https://react.dev  
-REST Countries API: https://restcountries.com  
-OpenAI (ChatGPT) for debugging help, code review, and clarifying React concepts  
-Claude for debugging help, code review, and clarifying React concepts  
-YouTube tutorials  
-Stack Overflow  
-Google.ca
-Google has a wide variety of api resources .. used them often 
+---
 
 ## Time Spent
-- Initial setup: _2_ hours
-- Component development: _4_ hours
-- Styling: _2_ hours
-- Debugging: _6_ hours
-- google api work arounds _2.5_ hours
-- map added _3_ hours
-- app styling containers _2_ hours
-- research _4_ hours
-- **Total: _25.5_ hours**
+```plaintext
+Initial setup ............... 2.0 hrs
+Component development ........ 4.0 hrs
+Styling ...................... 2.0 hrs
+Debugging .................... 6.0 hrs
+Google API experimentation ... 2.5 hrs
+Map integration .............. 3.0 hrs
+Container styling ............ 2.0 hrs
+Research ..................... 4.0 hrs
+README documentation ......... 1.5 hrs
+------------------------------------------------
+Total ....................... 27.0 hours
+```
 
+---
 
-
-## Author
-Christopher Britten - Semester 2 QAP3
-
+## Resources Used
+Class notes  
+React documentation  
+REST Countries API  
+OpenAI / Claude for debugging  
+Stack Overflow  
+YouTube tutorials  
+Google (API research)
 
