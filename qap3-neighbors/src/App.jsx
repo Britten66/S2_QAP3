@@ -1,37 +1,29 @@
 // Loads the React engine so JSX works
 import NeighborsA from "./components/NeighborA";
 import NeighborsI from "./components/NeighborI";
+import mapBackground from "./images/mapbackground.png";
+import MapView from "./components/MapView";
 
 import "./app.css";
 import { useState, useEffect } from "react";
 
-// React builds the UI inside this function
 function App() {
-  // state memory here
   const [allCountries, setAllCountries] = useState([]);
-
   const [neighborsA, setNeighborsA] = useState([]);
-
   const [neighborsI, setNeighborsI] = useState([]);
-
   const [showA, setShowA] = useState(false);
-
   const [showI, setShowI] = useState(false);
+  const [currentCountry, setCurrentCountry] = useState(null);
 
   useEffect(() => {
     fetch(
-      "https://restcountries.com/v3.1/all?fields=name,capital,flags,borders,cca3"
+      "https://restcountries.com/v3.1/all?fields=name,capital,flags,borders,cca3,languages,currencies"
     )
       .then((res) => res.json())
       .then((data) => {
         setAllCountries(data);
 
-        // kept that [] empty as to not loop infinitly
-
-        // filtering main array that will be poulated
-
-        // this is done by making a const of final result
-
+        // Filtering A here
         const filteredResultA = data.filter((country) => {
           if (!country.borders) return false;
           return country.borders.some((borderCode) => {
@@ -41,6 +33,7 @@ function App() {
         });
         setNeighborsA(filteredResultA);
 
+        // Filtering I here
         const filteredResultI = data.filter((country) => {
           if (!country.borders) return false;
           return country.borders.some((borderCode) => {
@@ -50,17 +43,26 @@ function App() {
         });
         setNeighborsI(filteredResultI);
       })
-
       .catch((error) => console.error("Error:", error));
   }, []);
-  // This is where your page content goes inside return
+
+  const activeCountries = showA ? neighborsA : showI ? neighborsI : [];
+
+  useEffect(() => {
+    if (activeCountries.length > 0) {
+      setCurrentCountry(activeCountries[0]);
+    } else {
+      setCurrentCountry(null);
+    }
+  }, [activeCountries]);
 
   return (
     <>
       <div className="container">
         <div className="headerText">
-          <h2> Semester 2 - QAP 3 - Christopher Britten</h2>
+          <h2>Semester 2 - QAP 3 - Christopher Britten</h2>
         </div>
+
         <div className="countryBtn">
           <button
             onClick={() => {
@@ -68,7 +70,6 @@ function App() {
               setShowI(false);
             }}
           >
-            {" "}
             Neighbor Countries Starting With A
           </button>
 
@@ -80,16 +81,16 @@ function App() {
           >
             Neighbor Countries Starting With I
           </button>
-        </div>{" "}
-        {/* closing countryBtn */}
-        {showA && <NeighborsA countries={neighborsA} />}
-        {showI && <NeighborsI countries={neighborsI} />}
-      </div>{" "}
-      {/* closing container */}
+        </div>
+
+        <div className="contentLayout">
+          {activeCountries.length > 0 && (
+            <MapView countries={activeCountries} />
+          )}
+        </div>
+      </div>
     </>
   );
 }
 
 export default App;
-
-// Tells React -this is the component to show on the page
