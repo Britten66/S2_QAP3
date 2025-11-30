@@ -4,7 +4,7 @@ import NeighborsI from "./components/NeighborI";
 import mapBackground from "./images/mapbackground.png";
 import MapView from "./components/MapView";
 
-import "./app.css";
+import "./App.css";
 import { useState, useEffect } from "react";
 
 function App() {
