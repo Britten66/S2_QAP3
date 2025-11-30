@@ -7,7 +7,6 @@
 body {
   background-image: url("./images/mapbackground.png");
   background-size: cover;
-
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: overlay;
@@ -17,7 +16,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 0;
   background: rgba(13, 17, 23, 0.418);
   border-radius: 12px;
@@ -29,26 +28,28 @@ body {
   text-align: center;
   background: rgba(13, 17, 23, 0.466);
   backdrop-filter: blur(3px);
-  padding: 24px;
+  padding: 20px 16px;
 }
 
 .headerText h2 {
   margin: 0;
-
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 .countryBtn {
   text-align: center;
   background: rgba(13, 17, 23, 0.275);
   backdrop-filter: blur(3px);
-  padding: 30px 20px;
+  padding: 20px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
 .countryBtn button {
-  padding: 12px 24px;
-  margin: 0 10px;
-  font-size: 16px;
+  padding: 12px 20px;
+  font-size: clamp(13px, 2.5vw, 16px);
   background-color: #007bff;
   color: white;
   border: none;
@@ -56,6 +57,9 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 500;
+  flex: 1 1 auto;
+  min-width: 200px;
+  max-width: 100%;
 }
 
 .countryBtn button:hover {
@@ -65,114 +69,135 @@ body {
 }
 
 .contentLayout {
-  padding: 54px;
+  padding: 20px 16px;
 }
 
 .viewMap {
   background: rgba(13, 17, 23, 0.75);
   backdrop-filter: blur(3px);
   border-radius: 8px;
-  padding: 24px;
+  padding: 20px 16px;
   border: 1px solid #3a3a3a;
 }
 
 .viewMap h3 {
   margin-bottom: 16px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: clamp(16px, 3vw, 20px);
 }
 
 .viewMap-button {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin: 20px 10px;
-  padding-left: 200px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 0;
 }
 
 .viewMap-button button {
-  padding: 10px 80px;
+  padding: 10px 24px;
   background: #1e88e5;
   border: none;
-  margin-left: 15px;
-  height: fit-content;
   color: white;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
   font-weight: 500;
   transition: all 0.3s;
+  flex: 1 1 auto;
+  min-width: 120px;
+  max-width: 200px;
 }
 
 .viewMap-button button:hover {
-  display: flex;
   color: #000000;
-  justify-content: center;
-  transform: scale(+1.1);
+  transform: scale(1.05);
 }
 
 .viewMap-frame {
-  flex: 1;
   border-radius: 8px;
   overflow: hidden;
-
   margin: 20px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .viewMap-frame iframe {
   width: 100%;
-  height: 450px;
+  height: 300px;
   display: block;
   border: none;
 }
 
 .viewMap-content {
-  gap: 24px;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 20px;
 }
 
 .viewMap-flag {
   background-color: #1e1e1e;
-  padding: 20px;
-  min-height: 320px;
+  padding: 16px;
   border-radius: 8px;
-  min-width: 100px;
-  max-width: 420px;
   border: 1px solid #3a3a3a;
   word-break: break-word;
+  width: 100%;
+}
+
+.viewMap-flag img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .viewMap-flag p {
   margin: 10px 0;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
 }
+
+.viewMap-flag strong {
+  display: inline-block;
+  margin-right: 4px;
+}
+
 .viewMap-top {
   display: flex;
-  gap: 140px;
+  flex-direction: column;
+  gap: 20px;
   margin-bottom: 20px;
-  align-items: flex-start;
-  min-height: 340px;
 }
+
+.side-info {
+  width: 100%;
+}
+
 .side-info p {
   margin: 10px 0;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
   white-space: normal;
 }
+
 .side-info h4 {
   margin: 10px 0;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: clamp(13px, 2.5vw, 14px);
   white-space: normal;
   text-align: center;
 }
+
 .enter-text {
-  margin-top: 80px;
+  margin-top: 40px;
   text-align: center;
+  padding: 0 16px;
 }
+
+/* Tablet styles */
 @media (min-width: 768px) {
   .container {
     margin: 40px auto;
