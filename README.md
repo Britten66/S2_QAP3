@@ -5,6 +5,10 @@
 ## Summary
 A React application that fetches live country data from the REST Countries API and filters countries based on whether they have neighbors whose names start with **A** or **I**. The app includes an interactive country viewer with navigation buttons, flag display, country facts, and a Google Maps embed showing the selected country’s location.
 
+## Border Code Sorting
+
+Note: The border codes are the only elements sorted numerically within the map data. All other fields, including country names, are sorted alphabetically.
+
 ---
 
 ## Setup
