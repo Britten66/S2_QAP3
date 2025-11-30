@@ -103,18 +103,19 @@ Rounded containers and spacing adjustments for readability.
 
 ## Time Spent
 ```plaintext
-Initial setup ............... 2.0 hrs
-Component development ........ 4.0 hrs
-Styling ...................... 2.0 hrs
-Debugging .................... 6.0 hrs
-Google API experimentation ... 2.5 hrs
-Map integration .............. 3.0 hrs
-Container styling ............ 2.0 hrs
-Research ..................... 4.0 hrs
-README documentation ......... 1.5 hrs
-------------------------------------------------
-Total ....................... 27.0 hours
+Project setup and environment ............ 2.0 hrs
+Building core components (App, MapView) .. 3.5 hrs
+Styling and layout adjustments ........... 2.0 hrs
+API integration and data handling ........ 3.0 hrs
+Debugging and fixing edge cases .......... 6.0 hrs
+Google Maps research/testing ............. 2.0 hrs
+Map view integration and UI tweaks ....... 3.0 hrs
+General research and documentation ....... 3.5 hrs
+README preparation and final cleanup ..... 2.0 hrs
+---------------------------------------------------
+Total .................................... 27.0 hours
 ```
+
 
 ---
 
@@ -122,8 +123,8 @@ Total ....................... 27.0 hours
 Class notes  
 React documentation  
 REST Countries API  
-OpenAI / Claude for debugging  
+Google Maps Embed documentation  
+MDN Web Docs  
 Stack Overflow  
-YouTube tutorials  
-Google (API research)
+YouTube tutorials (React & API usage)
 
