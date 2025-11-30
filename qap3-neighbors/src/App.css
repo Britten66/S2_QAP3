@@ -173,3 +173,65 @@ body {
   margin-top: 80px;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .container {
+    margin: 40px auto;
+  }
+
+  .headerText {
+    padding: 24px;
+  }
+
+  .countryBtn {
+    padding: 30px 20px;
+  }
+
+  .contentLayout {
+    padding: 40px 32px;
+  }
+
+  .viewMap {
+    padding: 24px;
+  }
+
+  .viewMap-frame iframe {
+    height: 400px;
+  }
+
+  .viewMap-top {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .viewMap-flag {
+    padding: 20px;
+    max-width: 420px;
+  }
+
+  .enter-text {
+    margin-top: 80px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .contentLayout {
+    padding: 54px;
+  }
+
+  .viewMap-button {
+    gap: 22px;
+  }
+
+  .viewMap-button button {
+    padding: 10px 60px;
+  }
+
+  .viewMap-frame iframe {
+    height: 450px;
+  }
+
+  .viewMap-top {
+    gap: 140px;
+  }
+}
