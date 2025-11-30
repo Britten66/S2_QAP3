@@ -114,13 +114,19 @@ OpenAI (ChatGPT) for debugging help, code review, and clarifying React concepts
 Claude for debugging help, code review, and clarifying React concepts  
 YouTube tutorials  
 Stack Overflow  
+Google.ca
+Google has a wide variety of api resources .. used them often 
 
 ## Time Spent
 - Initial setup: _2_ hours
 - Component development: _4_ hours
 - Styling: _2_ hours
 - Debugging: _6_ hours
-- **Total: _14_ hours**
+- google api work arounds _2.5_ hours
+- map added _3_ hours
+- app styling containers _2_ hours
+- research _4_ hours
+- **Total: _25.5_ hours**
 
 
 
