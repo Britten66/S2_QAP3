@@ -21,10 +21,11 @@ App runs at:
 ---
 
 ## Tech Used
-- React (Vite)
-- REST Countries API v3.1  
-- Google Maps Embed (query-based iframe)
-- CSS (custom layout + dark theme)
+- React (with Vite)
+- REST Countries API v3.1
+- Google Maps Embed API
+- Modern JavaScript (ES6+)
+- CSS for layout and theming
 
 ---
 
@@ -95,9 +96,13 @@ const query = encodeURIComponent(current.name.common);
 ---
 
 ## Styling
-Dark theme (`#0d1117`) with blue accent colors.  
-Flexbox layout for side-by-side country info and map.  
-Rounded containers and spacing adjustments for readability.
+- Custom background using a vintage map illustration  
+- Semi-transparent dark containers for readability over the background  
+- Blue accent buttons and highlights for consistent UI contrast  
+- Flexbox layout for country details and map display  
+- Rounded containers, spacing, and subtle shadows for visual clarity  
+- Responsive design adjustments for cleaner layout at various widths
+
 
 ---
 
