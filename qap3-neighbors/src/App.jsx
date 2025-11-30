@@ -82,7 +82,12 @@ function App() {
             Neighbor Countries Starting With I
           </button>
         </div>
-
+        {/* added this so the text disapears when button selected */}
+        {!showA && !showI && (
+          <div className="enter-text">
+            <h3>Select Filtering Option Above & the info will display!</h3>
+          </div>
+        )}
         <div className="contentLayout">
           {activeCountries.length > 0 && (
             <MapView countries={activeCountries} />

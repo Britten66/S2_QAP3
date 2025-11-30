@@ -85,8 +85,8 @@ body {
 .viewMap-button {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin: 20px 10;
+  gap: 22px;
+  margin: 20px 10px;
   padding-left: 200px;
 }
 
@@ -94,6 +94,7 @@ body {
   padding: 10px 80px;
   background: #1e88e5;
   border: none;
+  margin-left: 15px;
   height: fit-content;
   color: white;
   border-radius: 6px;
@@ -135,8 +136,9 @@ body {
 .viewMap-flag {
   background-color: #1e1e1e;
   padding: 20px;
+  min-height: 320px;
   border-radius: 8px;
-  min-width: 200px;
+  min-width: 100px;
   max-width: 420px;
   border: 1px solid #3a3a3a;
   word-break: break-word;
@@ -149,9 +151,10 @@ body {
 }
 .viewMap-top {
   display: flex;
-  gap: 220px;
+  gap: 140px;
   margin-bottom: 20px;
   align-items: flex-start;
+  min-height: 340px;
 }
 .side-info p {
   margin: 10px 0;
@@ -164,5 +167,9 @@ body {
   line-height: 1.6;
   font-size: 14px;
   white-space: normal;
+  text-align: center;
+}
+.enter-text {
+  margin-top: 80px;
   text-align: center;
 }
