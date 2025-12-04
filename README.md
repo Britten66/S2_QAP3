@@ -134,17 +134,14 @@ React documentation:
 - Component lifecycle  
 - State management patterns  
 REST Countries API documentation  
-Google Maps Embed API documentation  
+Google Maps Embed API documentation
+
 MDN Web Docs:
 - JavaScript ES6+ features  
 - CSS Flexbox and Grid  
 - Async/await and Promises  
-Stack Overflow (debugging and troubleshooting)  
-YouTube tutorials:
-- React fundamentals and project structure  
-- API integration with fetch  
-- Working with JSON data  
-- Responsive design techniques  
+
+YouTube tutorials
 W3Schools (CSS and HTML reference)  
 Vite documentation (configuration and build)  
 GitHub documentation (version control)
