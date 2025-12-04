@@ -3,7 +3,7 @@
 **Course:** Semester 2 – QAP 3  
 
 ## Summary
-A React application that fetches live country data from the REST Countries API and filters countries based on whether they have neighbors whose names start with **A** or **I**. The app includes an interactive country viewer with navigation buttons, flag display, country facts, and a Google Maps embed showing the selected country’s location.
+A React application that fetches live country data from the REST Countries API and filters countries based on whether they have neighbors whose names start with **A** or **I**. The app includes an interactive country viewer with navigation buttons, flag display, country facts, and a Google Maps embed showing the selected country's location.
 
 ## Border Code Sorting
 
@@ -107,33 +107,44 @@ const query = encodeURIComponent(current.name.common);
 - Rounded containers, spacing, and subtle shadows for visual clarity  
 - Responsive design adjustments for cleaner layout at various widths
 
-
 ---
 
 ## Time Spent
 ```plaintext
-Project setup and environment ............ 2.0 hrs
-Building core components (App, MapView) .. 3.5 hrs
-Styling and layout adjustments ........... 2.0 hrs
-API integration and data handling ........ 3.0 hrs
-Debugging and fixing edge cases .......... 6.0 hrs
-Google Maps research/testing ............. 2.0 hrs
-Map view integration and UI tweaks ....... 3.0 hrs
-General research and documentation ....... 3.5 hrs
-README preparation and final cleanup ..... 2.0 hrs
+Project setup and environment ............ 4.0 hrs
+Learning React concepts and hooks ........ 8.0 hrs
+Building core components (App, MapView) .. 7.0 hrs
+Styling and layout adjustments ........... 6.0 hrs
+API integration and data handling ........ 5.0 hrs
+Debugging and fixing edge cases .......... 12.0 hrs
+Google Maps research/testing ............. 4.0 hrs
+Map view integration and UI tweaks ....... 5.0 hrs
+General research and documentation ....... 6.0 hrs
+README preparation and final cleanup ..... 3.0 hrs
 ---------------------------------------------------
-Total .................................... 27.0 hours
+Total .................................... 55.0 hours
 ```
-
 
 ---
 
 ## Resources Used
-Class notes  
-React documentation  
-REST Countries API  
-Google Maps Embed documentation  
-MDN Web Docs  
-Stack Overflow  
-YouTube tutorials (React & API usage)
-
+Class notes and lecture materials  
+React documentation:
+- Hooks (useState, useEffect)  
+- Component lifecycle  
+- State management patterns  
+REST Countries API documentation  
+Google Maps Embed API documentation  
+MDN Web Docs:
+- JavaScript ES6+ features  
+- CSS Flexbox and Grid  
+- Async/await and Promises  
+Stack Overflow (debugging and troubleshooting)  
+YouTube tutorials:
+- React fundamentals and project structure  
+- API integration with fetch  
+- Working with JSON data  
+- Responsive design techniques  
+W3Schools (CSS and HTML reference)  
+Vite documentation (configuration and build)  
+GitHub documentation (version control)
