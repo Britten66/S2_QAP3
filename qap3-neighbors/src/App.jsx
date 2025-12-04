@@ -50,10 +50,9 @@ function App() {
         });
         setNeighborsA(filteredResultA);
 
-        // ------------------------------
-        // Same filtering logic as above,
-        // but checking for neighbors starting with I
-        // ------------------------------
+        // -----------------------------
+        //  neighbors starting with I
+        // -----------------------------
         const filteredResultI = data.filter((country) => {
           if (!country.borders) return false;
           return country.borders.some((borderCode) => {
