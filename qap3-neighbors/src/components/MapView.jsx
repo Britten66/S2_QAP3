@@ -1,21 +1,31 @@
+// using state + effect here
 import { useState, useEffect } from "react";
 
+// this shows a little map viewer for whatever countries get passed in
 function MapView({ countries }) {
+  // keeping track of which country I'm looking at
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    // whenever the list changes, reset back to the first one
     setIndex(0);
   }, [countries]);
 
+  // if nothing is passed in, don't show anything
   if (!countries || countries.length === 0) return null;
 
+  // grab the country I'm currently on
   const current = countries[index];
+
+  // cleaning up the name so Google Maps link works
   const query = encodeURIComponent(current.name.common);
 
+  // go forward (loops around)
   const next = () => {
     setIndex((prev) => (prev + 1) % countries.length);
   };
 
+  // go backwards (also loops)
   const prev = () => {
     setIndex((prev) => (prev - 1 + countries.length) % countries.length);
   };

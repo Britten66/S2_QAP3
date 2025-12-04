@@ -1,7 +1,4 @@
 // Importing the components I created for displaying the filtered lists
-import NeighborsA from "./components/NeighborA";
-import NeighborsI from "./components/NeighborI";
-import mapBackground from "./images/mapbackground.png";
 import MapView from "./components/MapView";
 
 import "./App.css";
@@ -24,9 +21,8 @@ function App() {
   // Stores whichever country should be focused/displayed first in the map view
   const [currentCountry, setCurrentCountry] = useState(null);
 
-  // ==============================
   // Fetching all the country data
-  // ==============================
+
   // I only want this to run once when the app loads, so the dependency array is empty.
   useEffect(() => {
     fetch(
@@ -60,7 +56,6 @@ function App() {
         // ------------------------------
         const filteredResultI = data.filter((country) => {
           if (!country.borders) return false;
-
           return country.borders.some((borderCode) => {
             const neighbor = data.find((c) => c.cca3 === borderCode);
             return neighbor?.name.common.startsWith("I");
@@ -68,7 +63,8 @@ function App() {
         });
         setNeighborsI(filteredResultI);
       })
-      // Basic error logging if something goes wrong
+
+      // Basic error logging and handling if something goes wrong .. it always does ..
       .catch((error) => console.error("Error:", error));
   }, []);
 
@@ -86,18 +82,14 @@ function App() {
     }
   }, [activeCountries]);
 
-
-          {/* QAP Header displaying here*/}
+  // QAP Header displaying here
 
   return (
     <>
       <div className="container">
-        {/* QAP Header */}
         <div className="headerText">
           <h2>Semester 2 - QAP 3 - Christopher Britten</h2>
         </div>
-
-        {/* Buttons that switch between A-filter and I-filter */}
         <div className="countryBtn">
           <button
             onClick={() => {
@@ -119,15 +111,11 @@ function App() {
             Neighbor Countries Starting With I
           </button>
         </div>
-
-        {/* Helper text for when nothing is selected yet */}
         {!showA && !showI && (
           <div className="enter-text">
             <h3>Select Filtering Option Above & the info will display!</h3>
           </div>
         )}
-
-        {/* Layout for showing the map + results */}
         <div className="contentLayout">
           {activeCountries.length > 0 && (
             <MapView countries={activeCountries} />
