@@ -1,13 +1,3 @@
-```
-project-root/
-├── src/
-│   ├── App.jsx
-│   ├── NeighborsA.jsx
-│   ├── NeighborsI.jsx
-│   ├── App.css
-│   ├── NeighborsA.css
-│   └── NeighborsI.css
-├── public/
-│   └── index.html
-└── package.json
-```
+# Country Search
+
+Search and explore countries using live data from the REST Countries API.
